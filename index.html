@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Form App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>PDF Form App</h1>
+<form class="fill_form">
+    <h2>Fill PDF Form</h2>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div class="form-group">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="tel">Téléphone:</label>
+            <input type="tel" id="tel" name="tel" required>
+        </div>
+        <div class="form-group">
+            <label for="mail">E-mail:</label>
+            <input type="email" id="mail" name="mail" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required>
+        </div>
+        <div class="form-group">
+            <label for="postal">Code Postal:</label>
+            <input type="text" id="postal" name="postal" required>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="ville">Ville:</label>
+            <input type="text" id="ville" name="ville" required>
+        </div>
+        <div class="form-group">
+            <label for="pays">Pays:</label>
+            <input type="text" id="pays" name="pays" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lieu">Lieu:</label>
+        <input type="text" id="lieu" name="lieu" required>
+    </div>
+
+    <hr>
+
+    <h3>Personnes (maximum 16)</h3>
+    <div id="people-container">
+        <div class="person-row">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="person-name-1">Nom:</label>
+                    <input type="text" id="person-name-1" name="person-name-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="person-surname-1">Prénom:</label>
+                    <input type="text" id="person-surname-1" name="person-surname-1" required>
+                </div>
+                <div class="form-group">
+                    <label for="person-age-1">Âge:</label>
+                    <input type="number" id="person-age-1" name="person-age-1" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="button" id="add-person-btn">Ajouter une personne</button>
+
+    <hr>
+
+    <button type="submit">Download PDF</button>
+</form>
+
+<div class="error"></div>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="pdfform.minipdf.dist.js"></script>
+<script src="src/index.js"></script>
+
+</body>
+</html>
