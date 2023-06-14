@@ -1,12 +1,145 @@
-.hidden {
-    display: none;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 20px 0;
 }
 
 .error {
     color: red;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+/* Form Styles */
 .fill_form {
-    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    flex-basis: 48%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 88%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button[type="button"],
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+button[type="button"]:hover,
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#people-container {
+    margin-bottom: 20px;
+}
+
+.person-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "name name age"
+    "input input input";
+    grid-gap: 10px;
+    grid-auto-rows: min-content;
+}
+
+.person-row {
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: relative;
+}
+
+.delete-person-btn {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #ff0000 !important;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-person-btn:hover {
+    background-color: #cc0000;
+}
+
+.add-person-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.add-person-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-person-btn:hover {
+    background-color: #45a049;
+}
+
+@media only screen and (max-width: 800px) {
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    .form-group {
+        flex-basis: 100%;
+    }
+
+    .person-grid {
+        grid-template-columns: 1fr;
+    }
 }

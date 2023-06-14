@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PDF Form App</title>
+    <title>Club de Saumur</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-<h1>PDF Form App</h1>
+<h1>Club de Saumur</h1>
 <form class="fill_form">
-    <h2>Fill PDF Form</h2>
+    <h2>Merci de remplir ce formulaire \ Please fill this form</h2>
     <div class="form-row">
         <div class="form-group">
-            <label for="nom">Nom:</label>
+            <label for="nom">Nom \ Name:</label>
             <input type="text" id="nom" name="nom" required>
         </div>
         <div class="form-group">
-            <label for="prenom">Prénom:</label>
+            <label for="prenom">Prenom \ Surname:</label>
             <input type="text" id="prenom" name="prenom" required>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group">
-            <label for="tel">Téléphone:</label>
+            <label for="tel">Telephone \ Phone:</label>
             <input type="tel" id="tel" name="tel" required>
         </div>
         <div class="form-group">
@@ -30,59 +31,63 @@
     </div>
     <div class="form-row">
         <div class="form-group">
-            <label for="adresse">Adresse:</label>
+            <label for="adresse">Adresse \ Adress:</label>
             <input type="text" id="adresse" name="adresse" required>
         </div>
         <div class="form-group">
-            <label for="postal">Code Postal:</label>
+            <label for="postal">Code Postal \ ZIP Code:</label>
             <input type="text" id="postal" name="postal" required>
         </div>
     </div>
     <div class="form-row">
         <div class="form-group">
-            <label for="ville">Ville:</label>
+            <label for="ville">Ville \ City:</label>
             <input type="text" id="ville" name="ville" required>
         </div>
         <div class="form-group">
-            <label for="pays">Pays:</label>
+            <label for="pays">Pays \ Country:</label>
             <input type="text" id="pays" name="pays" required>
         </div>
     </div>
     <div class="form-group">
-        <label for="lieu">Lieu:</label>
-        <input type="text" id="lieu" name="lieu" required>
+        <label for="lieu">Lieu de séjour \ Place of staying:</label>
+        <input type="text" id="lieu" name="lieu">
     </div>
 
     <hr>
 
-    <h3>Personnes (maximum 16)</h3>
+    <h3>Personnes</h3>
     <div id="people-container">
         <div class="person-row">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="person-name-1">Nom:</label>
+                    <label for="person-name-1">Nom \ Name:</label>
                     <input type="text" id="person-name-1" name="person-name-1" required>
                 </div>
                 <div class="form-group">
-                    <label for="person-surname-1">Prénom:</label>
+                    <label for="person-surname-1">Prénom \ Surname:</label>
                     <input type="text" id="person-surname-1" name="person-surname-1" required>
                 </div>
                 <div class="form-group">
-                    <label for="person-age-1">Âge:</label>
+                    <label for="person-age-1">Date de naissance \ Birthday:</label>
                     <input type="number" id="person-age-1" name="person-age-1" required>
                 </div>
+                <div class="form-group">
+                    <label for="person-mail-1">Mail :</label>
+                    <input type="number" id="person-mail-1" name="person-mail-1" required>
+                </div>
+
             </div>
         </div>
     </div>
-    <button type="button" id="add-person-btn">Ajouter une personne</button>
+    <button type="button" id="add-person-btn">Ajouter une personne \ Add someone</button>
 
     <hr>
 
-    <button type="submit">Download PDF</button>
+    <button type="submit">Imprimer le PDF \ Print PDF</button>
 </form>
 
 <div class="error"></div>
-<script src="https://apis.google.com/js/api.js"></script>
 <script src="pdfform.minipdf.dist.js"></script>
 <script src="src/index.js"></script>
 
